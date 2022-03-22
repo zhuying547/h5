@@ -4,15 +4,30 @@
     <meta charset="utf-8">
     <style>
       .col1 {
+        /* 每个列的宽度都是 100px */
+        width: 1200px;
         background-color: aquamarine;
       }
       .col2 {
         background-color: blanchedalmond;
       }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        table-layout: fixed;
+        width: 100%;
+      }
+      .wrap {
+        overflow: auto;
+      }
+      table, td, th {
+        border: none;
+      }
     </style>
   </head>
   <body>
-    <table>
+    <div class="wrap">
+    <table border="0">
       <colgroup>
         <col class="col1" span="2">
         <col class="col2">
@@ -23,5 +38,6 @@
         <td>3</td>
       </tr>
     </table>
+  </div>
   </body>
 </html>
