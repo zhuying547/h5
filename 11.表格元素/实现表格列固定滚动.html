@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      white-space: nowrap;
+    }
+    table, th, td {
+      border: none;
+    }
+    .table-scroll {
+      overflow: auto;
+      max-width: 500px;
+      display: block;
+    }
+    /* 
+      通过这三个属性即可实现表格元素本身的滚动，它的缺点是要固定宽度
+      overflow: auto;
+      max-width: 500px;
+      display: block;
+    */
+    /* 
+      通过设置容器的 overflow: auto 即可实现表格滚动，推荐使用这个，它的优点是无需固定宽度
+    */
+    .wrap {
+      overflow: auto;
+    }
+    table tr th:first-child, table tr td:first-child {
+      position: sticky;
+      left: 0;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+<body>
+  <table border="" class="table-scroll">
+    <tr>
+      <th>满江红</th>
+      <th>池州翠微亭</th>
+      <th>題翠巖寺</th>
+    </tr>
+    <tr>
+      <td>怒发冲冠，凭栏处，㴋㴋雨歇。
+        抬望眼，仰天长啸，壮怀激烈。
+        三十功名尘与土，八千里路云和月。
+        莫等闲，白了少年头，空悲切。
+        
+        靖康耻，犹未雪；臣子恨，何时灭？
+        驾长车，踏破贺兰山缺。
+        壮志饥餐胡虏肉，笑谈渴饮匈奴血。
+        待从头，收拾旧山河，朝天阙!</td>
+      <td>經年塵土滿征衣，特特尋芳上翠微。
+        好水好山看不足，馬蹄催趁月明歸。</td>
+      <td>秋風江上駐王師，暫向雲山躡翠微。
+        忠義必期清塞水，功名直欲鎮邊圻。
+        山林嘯聚何勞取，江滸羣兇定破機。
+        行復三關迎二聖，削平大難始言歸。</td>
+    </tr>
+  </table>
+
+  <div class="wrap">
+    <table border="">
+      <tr>
+        <th>满江红</th>
+        <th>池州翠微亭</th>
+        <th>題翠巖寺</th>
+      </tr>
+      <tr>
+        <td>怒发冲冠，凭栏处，㴋㴋雨歇。
+          抬望眼，仰天长啸，壮怀激烈。
+          三十功名尘与土，八千里路云和月。
+          莫等闲，白了少年头，空悲切。</td>
+        <td>經年塵土滿征衣，特特尋芳上翠微。
+          好水好山看不足，馬蹄催趁月明歸。</td>
+        <td>秋風江上駐王師，暫向雲山躡翠微。
+          忠義必期清塞水，功名直欲鎮邊圻。
+          山林嘯聚何勞取，江滸羣兇定破機。
+          行復三關迎二聖，削平大難始言歸。</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
